@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "zombicomsorting",
+    "name": "Zombicom Sorting",
+    "description": "Zombicom's Mindless Sorting, for all your inventory management needs!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["skootskapoots", "eldritchnerevar"],
+    "credits": "Team Zombicom",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [
+      "forge"
+    ]
+  }
+]
