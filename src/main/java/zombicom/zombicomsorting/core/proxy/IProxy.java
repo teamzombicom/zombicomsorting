@@ -1,4 +1,4 @@
-package zombicom.core.proxy;
+package zombicom.zombicomsorting.core.proxy;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

@@ -1,4 +1,4 @@
-package zombicom;
+package zombicom.zombicomsorting;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import zombicom.core.proxy.IProxy;
+import zombicom.zombicomsorting.core.proxy.IProxy;
 
 @Mod(
         modid = ZombicomSorting.MOD_ID,
@@ -22,8 +22,8 @@ public class ZombicomSorting
     public static final String MOD_NAME = "Zombicom's Mindless Sorting";
 
     public static final String VERSION = "0.0.1";
-    public static final String CLIENT = "zombicom.core.proxy.ClientProxy";
-    public static final String SERVER = "zombicom.core.proxy.ServerProxy";
+    public static final String CLIENT = "zombicom.zombicomsorting.core.proxy.ClientProxy";
+    public static final String SERVER = "zombicom.zombicomsorting.core.proxy.ServerProxy";
 
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 

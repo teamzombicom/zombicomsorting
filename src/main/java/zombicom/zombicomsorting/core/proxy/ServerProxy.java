@@ -1,15 +1,13 @@
-package zombicom.core.proxy;
+package zombicom.zombicomsorting.core.proxy;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
-import zombicom.ZombicomSorting;
 
-public class ClientProxy implements IProxy {
+public class ServerProxy implements IProxy {
 
     @Override
     public void preInit(FMLPreInitializationEvent event) {}
@@ -21,12 +19,10 @@ public class ClientProxy implements IProxy {
     public void postInit(FMLPostInitializationEvent event) {}
 
     @Override
-    public EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {
-        return (ctx.side.isClient()
-                ? Minecraft.getMinecraft().player
-                : ZombicomSorting.proxy.getPlayerEntityFromContext(ctx));
-    }
+    public void serverStarting(FMLServerStartingEvent event) {}
 
     @Override
-    public void serverStarting(FMLServerStartingEvent event) {}
+    public EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {
+        return ctx.getServerHandler().player;
+    }
 }
